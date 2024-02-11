@@ -7,9 +7,9 @@ export const Home = () => {
   return (
     <>
         <Main/>
-        <Row title='All Games' getData={FetchData}/>
-        <Row title='PC Games' getData={Platform}/>
-       
+        <Row rowId="1" getData={FetchData} title="All Games"/>
+        <Row rowId="2" getData={Platform} title="PC Games"/>
+      
     </>
   )
-}
+  }

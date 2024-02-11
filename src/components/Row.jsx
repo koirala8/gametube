@@ -1,23 +1,17 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Games } from "./Games";
+import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
 
-export const Row = ({  getData }) => {
+export const Row = ({  getData, title, rowId}) => {
   const [games, setGames] = useState([]);
-  const [pcGames, setPcGames] = useState([]);
   
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Fetch data for all platforms
         const gameData = await getData();
         setGames(gameData);
-
-        // Fetch data for PC platform
-        const pcData = await getData('pc');
-        setPcGames(pcData);
-
-       
       } catch (error) {
         console.error(error);
       }
@@ -26,39 +20,30 @@ export const Row = ({  getData }) => {
     fetchData();
   }, [getData]);
 
-  // Render the component
+  const slideLeft = () => {
+    var slider = document.getElementById('slider' + rowId)
+    slider.scrollLeft = slider.scrollLeft - 500;
+  }
+
+  const slideRight = () => {
+    var slider = document.getElementById('slider' + rowId)
+    slider.scrollLeft = slider.scrollLeft + 500;
+  }
 
 
-  return (
-    <div>
+  return (    
       <>
-        <div className="relative flex items-center">
-            
-          <div id={"slider"}>
+        <h2 className="p-4 font-bold text-black md:text-xl">{title}</h2>
+        <div className="relative flex items-center group">
+            <MdChevronLeft size={40} className="absolute left-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block"  onClick={slideLeft}/>
+          <div id={"slider" + rowId} className="relative w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide">
 
             {games.map((item, id) => (
-              <div
-                key={id}
-                className="w-[160px] sm:w-[200px] md:w-[240px] ml-6 lg:w-[280px] inline-block cursor-pointer p-2"
-              >
-                <img src={item?.thumbnail} alt={item?.title} />
-              </div>
+              <Games item={item} key={id}/>
             ))}
-
-            {pcGames.map((item, id) => (
-              <div
-                key={id}
-                className="w-[160px] sm:w-[200px] md:w-[240px] ml-6 lg:w-[280px] inline-block cursor-pointer p-2"
-              >
-                <img src={item?.thumbnail} alt={item?.title} />
-              </div>
-            ))}
-
-            
-            
           </div>
+              <MdChevronRight size={40} className="absolute right-0 z-10 hidden bg-white rounded-full opacity-50 cursor-pointer hover:opacity-100 group-hover:block" onClick={slideRight}/>
         </div>
       </>
-    </div>
   );
 };
