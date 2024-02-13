@@ -8,6 +8,8 @@ export function AuthContextProvider({ children }) {
     const [user, setUser] = useState({});
 
     function signUp(email, password) {
+        console.log(email, password);
+
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
