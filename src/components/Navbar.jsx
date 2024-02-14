@@ -9,14 +9,14 @@ export const Navbar = () => {
   const handleLogout = async () => {
     try{
       await logOut();
-      navigate('/');
+      navigate('/login');
     } catch (error) {
       console.log(error);
     }
   }
   return (
     <div className="flex flex-row justify-between px-3 py-3 z-[100] absolute w-full">
-      <Link to="/signUp">
+      <Link to="/login">
         <div className="bg-red w-[105px]">
           <h1 className="text-4xl italic font-bold text-white bg-red-500 border rounded-md">
             GAMETUBE
