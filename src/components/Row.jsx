@@ -1,7 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Games } from "./Games";
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
-export const Row = ({ getData }) => {
+export const Row = ({  getData }) => {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
@@ -18,22 +19,39 @@ export const Row = ({ getData }) => {
     fetchData();
   }, [getData]);
 
+  // Render the component
+
+
   return (
-    <div className="relative items-center p-2">
-      <div id="slider">
-        <ul className="flex flex-row gap-4 overflow-x-auto p-0 m-0">
-          {games.map((item, id) => (
-            <li key={id} className="relative cursor-pointer p-2">
-              <div className="w-[160px] sm:w-[200px] md:w-[240px] ml-6 lg:w-[280px] relative">
-                <img className="w-full h-full block" src={item?.thumbnail} alt={item?.title} />
-                <div className="absolute top-0 left-0 w-full h-full hover:bg-black/60 opacity-0 hover:opacity-100 text-white">
-                  <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center h-full text-center items-center">{item?.title}</p>
-                </div>
+    <div>
+      <>
+        <div className="relative flex items-center">
+            
+          <div id={"slider"}>
+
+            {games.map((item, id) => (
+              <div
+                key={id}
+                className="w-[160px] sm:w-[200px] md:w-[240px] ml-6 lg:w-[280px] inline-block cursor-pointer p-2"
+              >
+                <img src={item?.thumbnail} alt={item?.title} />
               </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+            ))}
+
+            {pcGames.map((item, id) => (
+              <div
+                key={id}
+                className="w-[160px] sm:w-[200px] md:w-[240px] ml-6 lg:w-[280px] inline-block cursor-pointer p-2"
+              >
+                <img src={item?.thumbnail} alt={item?.title} />
+              </div>
+            ))}
+
+            
+            
+          </div>
+        </div>
+      </>
     </div>
   );
 };

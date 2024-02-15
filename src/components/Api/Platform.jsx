@@ -1,6 +1,6 @@
 import axios from "axios"; // Import axios only once
 
- const Platform = async (platform) => {
+ const Platform = async () => {
     try {
         const options = {
             method: 'GET',
