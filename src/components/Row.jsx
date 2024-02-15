@@ -4,6 +4,8 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 export const Row = ({  getData }) => {
   const [games, setGames] = useState([]);
+  const [pcGames, setPcGames] = useState([]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -11,6 +13,12 @@ export const Row = ({  getData }) => {
         // Fetch data for all platforms
         const gameData = await getData();
         setGames(gameData);
+
+        // Fetch data for PC platform
+        const pcData = await getData('pc');
+        setPcGames(pcData);
+
+       
       } catch (error) {
         console.error(error);
       }
