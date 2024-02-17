@@ -1,0 +1,79 @@
+[33mcommit 31ae8c140a22848d3654892e9a179f702a16be53[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Wed Feb 14 14:39:30 2024 -0600
+
+    Implemented protected route on Account page
+
+[33mcommit 02a4a2d75dd082f7ca67a4a5f4a08891e7f72969[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Tue Feb 13 13:52:31 2024 -0600
+
+    Created SignUp logout sign in using firebase authentication
+
+[33mcommit 0293273a0981e545d2bb92d2ded0038346494b65[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Mon Feb 12 00:37:09 2024 -0600
+
+    Mounted signIn, signUp component
+
+[33mcommit 533399724fe5a1ed67c71028369070e2b4699a97[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Sun Feb 11 14:41:23 2024 -0600
+
+    Configured Firebase Authentication and Account setup
+
+[33mcommit 0b1118df551e1daadf1b79000b3b5719ffd6a391[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Sun Feb 11 02:37:11 2024 -0600
+
+    Fast Scrolling while browsing games is added
+
+[33mcommit ae5298ac57a38c5c76e5f93d1ad307d4a502ba19[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Sun Feb 11 02:23:03 2024 -0600
+
+    Used two APIs from Rapid Api to get All Games and PC Games data
+
+[33mcommit dbddcf4b02fbd08c7f7132e14e89242a47138982[m
+Merge: f3236e5 353ff82
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Sat Feb 10 12:53:30 2024 -0600
+
+    Use Rapid API to get games description and platforms
+
+[33mcommit f3236e5e9e0aa0694d083a501ee10cef9b4ce9d4[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Sat Feb 10 12:51:44 2024 -0600
+
+    Use Rapid API to get games description and platforms
+
+[33mcommit 353ff8262bf99b8816487a3f63c09527f4f62797[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Fri Feb 9 05:00:33 2024 -0600
+
+    Update README.md
+
+[33mcommit 6b623249be830163c0268c4212de90d730109bbf[m
+Merge: 911413f 8eadcdb
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Fri Feb 9 04:59:39 2024 -0600
+
+    Merge branch 'main' of https://github.com/koirala8/gametube
+
+[33mcommit 911413fc3d677968083ffd365d28b4cc79e1b46d[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Fri Feb 9 04:56:55 2024 -0600
+
+    Project setup and home page
+
+[33mcommit 8eadcdb7b870b6c38fd60076034cb76e29e8f225[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Fri Feb 9 04:55:21 2024 -0600
+
+    Initial commit
+
+[33mcommit 4694791e00859cd520768face460287f1bad2c5e[m
+Author: Mahendra Koirala <60951574+koirala8@users.noreply.github.com>
+Date:   Fri Feb 9 00:14:17 2024 -0600
+
+    Initialize project using Create React App
