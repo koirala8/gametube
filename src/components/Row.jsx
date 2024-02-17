@@ -2,31 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Games } from "./Games";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
-<<<<<<< HEAD
 export const Row = ({ getData, title, rowId }) => {
   const [games, setGames] = useState([]);
-=======
-export const Row = ({  getData }) => {
-  const [games, setGames] = useState([]);
-  const [pcGames, setPcGames] = useState([]);
-  
->>>>>>> 1a5255e4940eab4c8439072b410e397354fefe91
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch data for all platforms
         const gameData = await getData();
         setGames(gameData);
-<<<<<<< HEAD
-=======
-
-        // Fetch data for PC platform
-        const pcData = await getData('pc');
-        setPcGames(pcData);
-
-       
->>>>>>> 1a5255e4940eab4c8439072b410e397354fefe91
       } catch (error) {
         console.error(error);
       }
@@ -35,7 +18,6 @@ export const Row = ({  getData }) => {
     fetchData();
   }, [getData]);
 
-<<<<<<< HEAD
   let timeout;
 
   const slideLeft = () => {
@@ -79,41 +61,5 @@ export const Row = ({  getData }) => {
         />
       </div>
     </>
-=======
-  // Render the component
-
-
-  return (
-    <div>
-      <>
-        <div className="relative flex items-center">
-            
-          <div id={"slider"}>
-
-            {games.map((item, id) => (
-              <div
-                key={id}
-                className="w-[160px] sm:w-[200px] md:w-[240px] ml-6 lg:w-[280px] inline-block cursor-pointer p-2"
-              >
-                <img src={item?.thumbnail} alt={item?.title} />
-              </div>
-            ))}
-
-            {pcGames.map((item, id) => (
-              <div
-                key={id}
-                className="w-[160px] sm:w-[200px] md:w-[240px] ml-6 lg:w-[280px] inline-block cursor-pointer p-2"
-              >
-                <img src={item?.thumbnail} alt={item?.title} />
-              </div>
-            ))}
-
-            
-            
-          </div>
-        </div>
-      </>
-    </div>
->>>>>>> 1a5255e4940eab4c8439072b410e397354fefe91
   );
 };
